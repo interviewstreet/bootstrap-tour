@@ -227,8 +227,7 @@
 
       $.support.transition && this.$tip.hasClass('fade') ?
         $tip
-          .one('bsTransitionEnd', complete)
-          .emulateTransitionEnd(150) :
+          .one('bsTransitionEnd', complete) :
         complete()
     }
   }
@@ -315,8 +314,7 @@
 
     $.support.transition && this.$tip.hasClass('fade') ?
       $tip
-        .one('bsTransitionEnd', complete)
-        .emulateTransitionEnd(150) :
+        .one('bsTransitionEnd', complete) :
       complete()
 
     this.hoverState = null
