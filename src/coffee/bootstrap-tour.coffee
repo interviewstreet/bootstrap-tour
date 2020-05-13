@@ -621,7 +621,9 @@
     _initKeyboardNavigation: ->
       return unless @_options.keyboard
 
-      $(document).on "keyup.tour-#{@_options.name}", (e) =>
+      $(document)
+      .off "keyup.tour-#{@_options.name}"
+      .on "keyup.tour-#{@_options.name}", (e) =>
         return unless e.which
 
         switch e.which

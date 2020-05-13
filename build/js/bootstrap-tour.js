@@ -716,7 +716,7 @@
       if (!this._options.keyboard) {
         return;
       }
-      return $(document).on("keyup.tour-" + this._options.name, (function(_this) {
+      return $(document).off("keyup.tour-" + this._options.name).on("keyup.tour-" + this._options.name, (function(_this) {
         return function(e) {
           if (!e.which) {
             return;
